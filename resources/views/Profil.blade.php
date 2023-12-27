@@ -21,6 +21,8 @@
 }
 
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
     background-color: #e8f5ff;
     font-family: Arial;
     overflow: hidden;
@@ -229,22 +231,14 @@ body {
     <div class="main">
         <h2>IDENTITY</h2>
         <div class="card">
-            <div class="card-body">
-                <i class="fa fa-pen fa-xs edit"></i>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Name</td>
-                            <td>:</td>
-                            <td>{{ $user->name }}</td>
-                        </tr>
-                        <tr>
-                            <td>Email</td>
-                            <td>:</td>
-                            <td>{{ $user->email }}</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="card-body" style="padding:20px 0px">
+                <ul >
+                    <li style="list-style: none">Name :  {{ $user->name }}</li>
+                </ul>
+                <ul style="margin-top: 2rem">
+                    <li style="list-style: none">Email : {{ $user->email }} </li>
+                </ul>
+
             </div>
         </div>
 
