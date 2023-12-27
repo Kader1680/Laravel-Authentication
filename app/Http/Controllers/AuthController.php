@@ -17,14 +17,34 @@ class AuthController extends Controller
     }
     public function register(Request $request)
     {
-        return User::create(
-            [
+        // return User::create(
+        //     [
 
-                "name" => $request->input("name"),
-                "email" => $request->input("email"),
-                "password" => Hash::make($request->input("password")),
-            ]
-            );
+        //         "name" => $request->input("name"),
+        //         "email" => $request->input("email"),
+        //         "password" => Hash::make($request->input("password")),
+        //     ]
+        //     );
+
+            $user = new User();
+
+            $user->name = $request->name;
+            $user->email = $request->email;
+            $user->password = Hash::make($request->password);
+
+            $user->save();
+            $credetials = [
+                'email' => $request->email,
+                'password' => $request->password,
+            ];
+
+            if (Auth::attempt($credetials)) {
+                return redirect()->route('profil');
+            }else{
+                return view("invalid");
+
+            }
+
     }
 
 

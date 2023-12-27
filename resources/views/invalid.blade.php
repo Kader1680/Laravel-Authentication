@@ -8,7 +8,7 @@ body{
     background-color: #008cba;
 }
     div{
-        background-color: rgb(215, 215, 215);
+        background-color: rgb(255,225,225);
         color:rgb(14, 14, 14);
         width: 50%;
         position: fixed;
@@ -34,7 +34,7 @@ body{
 
 <body>
     <div>
-        <h1>Sorry Your Information Isn't Valid </h1>
+        <h1 style="color: #ff4646">Sorry Your Information Isn't Valid </h1>
         <h3>please try again</h3>
         <button>
             <a  href="/login">Back to login </a>

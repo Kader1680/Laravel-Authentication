@@ -137,9 +137,7 @@ body {
     width: 65%;
 }
 
-/* End */
 
-/* Main */
 .main {
     margin-top: 2%;
     margin-left: 29%;
@@ -154,7 +152,30 @@ body {
     font-size: 24px;
     margin-bottom: 10px;
 }
+@media(max-width:767px){
+    .sidenav{
+        display: none;
+    }
+    .main .card {
+    background-color: #fff;
+    border-radius: 18px;
+    box-shadow: 1px 1px 8px 0 grey;
+    height: auto;
 
+    position: fixed;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%)
+}
+
+.card-body ul{
+    margin-left: -50px;
+    padding: 20px;
+}
+.card-body ul li{
+    font-size:18px;
+}
+}
 .main .card {
     background-color: #fff;
     border-radius: 18px;
@@ -169,17 +190,6 @@ body {
     font-size: 16px;
     height: 270px;
     width: 80%;
-}
-
-.edit {
-    position: absolute;
-    color: #e7e7e8;
-    right: 14%;
-}
-
-.social-media {
-    text-align: center;
-    width: 90%;
 }
 
 
@@ -206,7 +216,7 @@ body {
     <!-- End -->
 
     <!-- Sidenav -->
-    <div class="sidenav">
+    <div  class="sidenav">
         <div class="profile">
             <img src="https://imdezcode.files.wordpress.com/2020/02/imdezcode-logo.png" alt="" width="100" height="100">
 
@@ -231,7 +241,7 @@ body {
     <div class="main">
         <h2>IDENTITY</h2>
         <div class="card">
-            <div class="card-body" style="padding:20px 0px">
+            <div class="card-body">
                 <ul >
                     <li style="list-style: none">Name :  {{ $user->name }}</li>
                 </ul>

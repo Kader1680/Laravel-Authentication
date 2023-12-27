@@ -1,6 +1,0 @@
-
-
-
-
-
-welcome to home page
