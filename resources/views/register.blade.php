@@ -84,15 +84,26 @@ button:hover{
 <div class="container">
     <div class="content">
        <img src="https://res.cloudinary.com/debbsefe/image/upload/f_auto,c_fill,dpr_auto,e_grayscale/image_fz7n7w.webp" alt="header-image" class="cld-responsive">
-            <h1 class="form-title">Login Here</h1>
-            <form action="" method="POST">
+            <h1 class="form-title">Register Here</h1>
+            <form  enctype="multipart/form-data" action="{{ route("register") }}" method="POST">
                 @csrf
-                <input type="text" placeholder="EMAIL ADDRESS">
+
+               <input name="name" type="text" placeholder="NAME">
+            {{-- <div class="beside">
+                <input type="number" placeholder="PHONE NUMBER">
+                <select>
+                    <option>GENDER</option>
+                    <option>MALE</option>
+                    <option>FEMALE</option>
+                    <option>NON-BINARY</option>
+                </select>
+            </div> --}}
+                <input name="email" type="email" placeholder="EMAIL ADDRESS">
                 {{-- <input type="password" placeholder="PASSWORD "> --}}
-                <input type="text" placeholder="PASSWORD"><br>
-                <button type="button"><input type="submit" name="submit" placeholder="submit" ></button>
-                <a href="/"><button type="button">Register</button></a>
+                <input name="password" type="text" placeholder="PASSWORD"><br>
+                <button type="button"><input type="submit" name="submit" placeholder="Login" ></button>
+                <a href="/login"><button name="submit" type="button">Login</button></a>
+
             </form>
         </div>
  </div>
-
