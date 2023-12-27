@@ -87,9 +87,9 @@ button:hover{
             <h1 class="form-title">Login Here</h1>
             <form action="" method="POST">
                 @csrf
-                <input type="text" placeholder="EMAIL ADDRESS">
+                <input name="email" type="text" placeholder="EMAIL ADDRESS">
                 {{-- <input type="password" placeholder="PASSWORD "> --}}
-                <input type="text" placeholder="PASSWORD"><br>
+                <input name="password" type="text" placeholder="PASSWORD"><br>
                 <button type="button"><input type="submit" name="submit" placeholder="submit" ></button>
                 <a href="/"><button type="button">Register</button></a>
             </form>

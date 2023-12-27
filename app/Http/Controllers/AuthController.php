@@ -1,12 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-
 class AuthController extends Controller
 {
 
@@ -45,9 +43,9 @@ class AuthController extends Controller
 
             if (!Auth::attempt($request->only('email', 'password'))) {
                 // return response()->json(['message' => 'error']);
-                return redirect("/home");
+                return view("invalid");
             }else{
-                return redirect("/home");
+                return view('home');
 
             }
 
@@ -97,7 +95,7 @@ class AuthController extends Controller
 
 
             if (Auth::attempt($credetials)) {
-                return view("home");
+                return redirect()->route('profil');
             }else{
                 return view("invalid");
 
